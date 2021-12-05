@@ -1,12 +1,111 @@
+:root {
+  /* Colors */
+  --color-black: hsl(0deg, 0%, 0%);
+  --color-gray-very-dark: hsl(0deg, 0%, 10%);
+  --color-gray-dark: hsl(0deg, 0%, 30%);
+  --color-gray-medium: hsl(0deg, 0%, 40%);
+  --color-gray-light: hsl(0deg, 0%, 60%);
+  --color-white: hsl(0deg, 0%, 100%);
+  --color-primary: hsl(160deg, 100%, 30%);
+  --color-secondary-light: hsl(45deg, 100%, 50%);
+  --color-secondary-dark: hsl(45deg, 100%, 40%);
+  /* Fonts */
+  --font-size-small: 1rem;
+  --font-size-medium: 1.25rem;
+  --font-size-big: 1.5rem;
+  --font-size-huge: 2rem;
+  /* Spacing */
+  --spacing-xxsmall: 8px;
+  --spacing-xsmall: 16px;
+  --spacing-small: 24px;
+  --spacing-medium: 32px;
+  --spacing-large: 48px;
+  --spacing-xlarge: 64px;
+  --spacing-xxlarge: 96px;
+  --spacing-huge: 128px;
+}
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 /* Add styles here! */
+h1 {
+  font-size: var(--font-size-huge);
+  padding-bottom: var(--spacing-xsmall);
+}
+
+h2 {
+  font-size: var(--font-size-big);
+}
+
+p {
+  font-size: var(--font-size-medium);
+}
+
+header {
+  margin-top: var(--spacing-large);
+  border-bottom: solid var(--color-gray-medium) var(--spacing-xxsmall);
+}
+
+header strong {
+  color: var(--color-primary);
+}
+
+main {
+  background-color: var(--color-gray-light);
+  padding-top: var(--spacing-medium);
+}
+
+.intro-chunk {
+  background-color: var(--color-white);
+  padding: var(--spacing-xsmall);
+  padding-bottom: var(--spacing-medium);
+}
+
+.intro-chunk p {
+  max-width: 50%;
+  font-size: var(--font-size-medium);
+}
+
+.max-width-wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  background-color: var(--color-white);
+  border-bottom: solid var(--color-gray-medium) var(--spacing-xxsmall);
+  padding: var(--spacing-xsmall);
+  padding-top: 0px;
+  margin-top: var(--spacing-large);
+}
+
+.indented-heading {
+  display: inline-block;
+  background-color: var(--color-secondary-light);
+  padding: var(--spacing-xsmall);
+  margin-top: var(--spacing-xxsmall);
+  margin-left: -24px;
+  border-bottom: solid var(--color-secondary-dark) var(--spacing-xxsmall);
+}
+
+@media (max-width: 480px) {
+  .card p {
+    display: none;
+  }
+}
+
+@media (min-width: 480px) {
+  main {
+    height: 100%;
+  }
+}
